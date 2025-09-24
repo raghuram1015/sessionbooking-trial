@@ -1,4 +1,4 @@
-const bookingConfirmationTemplate = (booking, session, user) => {
+export const bookingConfirmationTemplate = (booking, session, user) => {
   return {
     subject: `Booking Confirmation - ${session.title}`,
     html: `
@@ -66,7 +66,7 @@ const bookingConfirmationTemplate = (booking, session, user) => {
   }
 }
 
-const bookingCancellationTemplate = (booking, session, user) => {
+export const bookingCancellationTemplate = (booking, session, user) => {
   return {
     subject: `Booking Cancelled - ${session.title}`,
     html: `
@@ -120,7 +120,7 @@ const bookingCancellationTemplate = (booking, session, user) => {
   }
 }
 
-const sessionReminderTemplate = (booking, session, user) => {
+export const sessionReminderTemplate = (booking, session, user) => {
   return {
     subject: `Reminder: ${session.title} starts in 24 hours`,
     html: `
@@ -184,10 +184,4 @@ const sessionReminderTemplate = (booking, session, user) => {
       Session Booker - Making learning accessible for everyone
     `,
   }
-}
-
-module.exports = {
-  bookingConfirmationTemplate,
-  bookingCancellationTemplate,
-  sessionReminderTemplate,
 }
